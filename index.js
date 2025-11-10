@@ -885,9 +885,7 @@ bot.on("getsuzo", async (ctx) => {
 
 //=================================================\\
 bot.hears(/^(start|menu|mulai)$/i, async (ctx) => {
-  const sender = ctx.from.username
-      ? `@${ctx.from.username}`
-  const versi = getBotVersion();
+  const versi = await getBotVersion();
   const userId = ctx.from.id.toString();
 
   const mainMenuMessage = `
@@ -900,7 +898,6 @@ While you are high, don't strengthen the stronger.
 ス Version : ${versi}
 ス Script : PhenoxScary 
 ス Language : JavaScript 
-ス User : ${sender}
 
 <blockquote>Please Select Menu to Perform Activities</blockquote>
 `;
@@ -1407,9 +1404,6 @@ Hd Atau Screenshot Jernih Dari iPhone!
 });
 
 bot.action("back", async (ctx) => {
-  const sender = ctx.from.username
-      ? `@${ctx.from.username}`
-  const sys = getSystemInfo();
   const versi = await getBotVersion();
   const userId = ctx.from.id.toString();
 
@@ -1423,7 +1417,6 @@ While you are high, don't strengthen the stronger.
 ス Version : ${versi}
 ス Script : PhenoxScary 
 ス Language : JavaScript 
-ス User : ${sender}
 
 <blockquote>Please Select Menu to Perform Activities</blockquote>
 `;
