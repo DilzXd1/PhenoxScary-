@@ -1195,7 +1195,6 @@ bot.action("tools_menu", async (ctx) => {
 ›› Lapor
 ›› Cs
 ›› Ttsearch 
-›› Yts
 ›› Acces
 ›› Listcmd
 ›› Delcmd
@@ -1856,39 +1855,6 @@ bot.hears(/^phnxbeta\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, as
 });
 
 //=================================================\\
-const yts = require("yts-search");
-
-bot.hears(/^yts (.+)/i, async (ctx) => {
-  try {
-    const query = ctx.match[1];
-    const searching = await ctx.reply("🔍 Sedang mencari...");
-
-    const res = await yts(query);
-
-    if (!res || !res.videos || res.videos.length === 0) {
-      return ctx.reply("❌ Video tidak ditemukan.");
-    }
-
-    let teks = `🎬 *Hasil Pencarian YouTube:*\n\n`;
-
-    for (let i = 0; i < Math.min(res.videos.length, 10); i++) {
-      let vid = res.videos[i];
-      teks += `*${i + 1}. ${vid.title}*\n`
-           + `Channel: ${vid.author.name}\n`
-           + `Durasi: ${vid.timestamp}\n`
-           + `Views: ${vid.views.toLocaleString()}\n`
-           + `🔗 https://youtu.be/${vid.videoId}\n\n`;
-    }
-
-    await ctx.deleteMessage(searching.message_id);
-    await ctx.reply(teks, { parse_mode: "Markdown" });
-
-  } catch (err) {
-    console.log(err);
-    ctx.reply("⚠️ Terjadi kesalahan saat mencari.");
-  }
-});
-
 
 
 bot.hears(/^cekidch\b(?:\s+(.*))?$/i, async (ctx) => {
