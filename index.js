@@ -17,6 +17,7 @@ const path = require("path");
 const moment = require("moment-timezone");
 const axios = require("axios");
 const pino = require("pino");
+const { BOT_TOKEN } = require("./config.js");
 const chalk = require("chalk");
 const figlet = require("figlet");
 const gradient = require("gradient-string");
