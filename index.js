@@ -887,7 +887,6 @@ bot.on("getsuzo", async (ctx) => {
 bot.hears(/^(start|menu|mulai)$/i, async (ctx) => {
   const sender = ctx.from.username
       ? `@${ctx.from.username}`
-  const sys = getSystemInfo();
   const versi = await getBotVersion();
   const userId = ctx.from.id.toString();
 
