@@ -2003,7 +2003,7 @@ bot.hears(/^addcreds\b(?:\s+(.*))?$/i, async (ctx) => {
   }
 });
 
-bot.hears(/^listsender\b(?:\s+(.*))?$/i, async (ctx) => {
+bot.hears(/^listsender$/i, async (ctx) => {
   const devices = fs.readdirSync(SESSIONS_DIR).filter((dir) => {
     return fs.existsSync(path.join(SESSIONS_DIR, dir, "creds.json"));
   });
@@ -2047,7 +2047,7 @@ bot.hears(/^listsender\b(?:\s+(.*))?$/i, async (ctx) => {
   ctx.reply(replyMsg);
 });
 
-bot.hears(/^setcmd\b(?:\s+(.*))?$/i, async (ctx) => {
+bot.hears(/^setcmd$/i, async (ctx) => {
     try {
         const cmd = ctx.message.text.split(" ")[1]
         if (!cmd) return ctx.reply("⚠️ Contoh: Reply sticker lalu ketik:\n\n`Setcmd start`")
