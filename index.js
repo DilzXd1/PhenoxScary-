@@ -56,7 +56,6 @@ const developerId = "7454464877";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-bot.use(session());
 
 const randomImages = [
    "https://files.catbox.moe/a63g13.jpg",
