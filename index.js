@@ -1203,26 +1203,26 @@ bot.hears(/^(start|menu|mulai)$/i, async (ctx) => {
   const username = ctx.from.first_name || ctx.from.username || "Tidak Diketahui";
 
   const mainMenuMessage = `
-*╭──(      Phenox ☇ Scary      )*
+*╭──(      Getsuzo ☇ Znx      )*
 *│🎭 𝐍𝐚𝐦𝐞 : ${username}*
 *║▬▭▬▭▬▭▬▭▬▭*
 │🎭 𝐎𝐰𝐧𝐞𝐫 : RenzXml
-*│🎭 Name Script : PhenoxScary*
-*│▬▭「 PhenoxScary 」▭▬*
-║› PhenoxScary ©Copyright
-╰━━━━━━━━━━━━━━━━━━━━━⬣
+*│🎭 Name Script : GetsuzoZnx*
+*│▬▭「 GetsuzoZnx」▭▬*
+║› Getsuzo ©Copyright
+╰━━━━━━━━━━━━━━━━━━━━━━━━━⬣
 `;
 
   const keyboard = [
     [
-       { text: "› › PhenoxScary", callback_data: "bugm" },
-       { text: "› › DevMenu", callback_data: "dev_menu" },
+       { text: "「 𝙓𝙥𝙡𝙤𝙞𝙩 」", callback_data: "bugm" },
+       { text: "「 𝙎𝙤𝙪𝙧𝙘𝙚 」", callback_data: "dev_menu" },
        ],
        [
-       { text: "› › System", callback_data: "system_menu" },
+       { text: " 𝙎𝙮𝙨𝙩𝙚𝙢", callback_data: "system_menu" },
       ],
       [
-       { text: "「 Developer 」", url: "t.me/RapzXyzz" }
+       { text: "「 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧  」", url: "t.me/RapzXyzz" }
     ],
   ];
 
@@ -1236,7 +1236,7 @@ bot.hears(/^(start|menu|mulai)$/i, async (ctx) => {
 
 bot.action("dev_menu", async (ctx) => {
   const userId = ctx.from.id.toString();
-  await ctx.answerCbQuery("🔥Executing...");
+  await ctx.answerCbQuery("🔥𝙀𝙭𝙚𝙘𝙪𝙩𝙞𝙣𝙜");
 
   if (userId !== developerId) {
     await ctx.answerCbQuery("𝗧𝗵𝗶𝘀 𝗺𝗲𝗻𝘂 𝗰𝗮𝗻 𝗼𝗻𝗹𝘆 𝗯𝗲 𝘂𝘀𝗲𝗱 𝗯𝘆 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿𝘀!", { show_alert: true });
@@ -1244,7 +1244,7 @@ bot.action("dev_menu", async (ctx) => {
   }
   
   const mainMenuMessage = `
-*╭──(    PhenoxScary Source    )*
+*╭──(    Getsuzo Source    )*
 Accdb Id duration
 Deldb Id 
 Setversi versi
@@ -1311,12 +1311,12 @@ bot.action("system_menu", async (ctx) => {
 await ctx.answerCbQuery("🔥Executing...");
   
   const mainMenuMessage = `
-Core ScaryPhenox - ス
+Core GetsuzoBot- ス
 
-Unit Pusat Struktur PhenoxScary.
+Unit Pusat Struktur Getsuzo.
 Phenox Bot Adalah Ekosistem Modular Yang Dirancang Untuk Otomatisasi, Investigasi Digital, Dan Kendali Penuh Atas Data Dan Media.
 
-Dengan Integrasi Sistematis Yang Stabil Dan Framework Kuat, PhenoxScary Memungkinkan Kamu:
+Dengan Integrasi Sistematis Yang Stabil Dan Framework Kuat, Getsuzo Memungkinkan Kamu:
 › Integrasi Eksploitasi Dan Intelijen
 › Fokus Pada Efektivitas Dan Kemudahan User
 
@@ -1334,21 +1334,21 @@ Built Not Just To Assist, But To Dominate The Flow Of Data.
     inline_keyboard: [
       [
         { 
-          text: "ス Owner Menu", 
+          text: "「 𝘼𝙘𝙘𝙚𝙨 𝙈𝙚𝙣𝙪 」", 
           callback_data: "owner_menu", 
         },
         {
-          text: "ス Manifest",
+          text: "「 𝙈𝙖𝙣𝙞𝙛𝙚𝙨𝙩 」",
           callback_data: "manifest",
         }
       ], 
       [
         {
-          text: "ス Tools",
+          text: "𝙏𝙤𝙤𝙡𝙨",
           callback_data: "tools_menu",
         },
         {
-          text: " back to menu", 
+          text: "< back to menu", 
           callback_data: "back", 
         }
       ],
@@ -1391,7 +1391,7 @@ bot.action("owner_menu", async (ctx) => {
     inline_keyboard: [
       [
         { 
-          text: " Back to menu", 
+          text: "< Back to menu", 
           callback_data: "back",
         }
       ],
@@ -1419,7 +1419,7 @@ bot.hears(/^speed$/i, async (ctx) => {
 ›› Runtime ›› ${sys.uptime}
 ›› Cpu ›› ${sys.cpu}
 ›› Ram ›› ${sys.ram}
-<blockquote>@ PhenoxScary</blockquote>
+<blockquote>@ Getsuzo Znx</blockquote>
 `;
 
   await ctx.replyWithPhoto(getRandomImage(), {
@@ -1430,7 +1430,7 @@ bot.hears(/^speed$/i, async (ctx) => {
 
 bot.action("tools_menu", async (ctx) => {
   
-  await ctx.answerCbQuery("🔥Executing...");
+  await ctx.answerCbQuery("🔥𝙀𝙭𝙚𝙘𝙪𝙩𝙞𝙣𝙜");
   
   const mainMenuMessage = `
 ╭──(     Tools Area      )
@@ -1452,7 +1452,7 @@ bot.action("tools_menu", async (ctx) => {
 ›› Countryinfo
 ›› Cekid
 ╰━━━━━━━━━━━━━━━━━⬣
-<blockquote>© PhenoxScary</blockquote>
+<blockquote>© Getsuzo Znx</blockquote>
 `;
 
   const media = {
@@ -1466,7 +1466,7 @@ bot.action("tools_menu", async (ctx) => {
     inline_keyboard: [
       [
         { 
-          text: " Back to menu", 
+          text: "< Back to menu", 
           callback_data: "back",
         }
       ],
@@ -1525,7 +1525,7 @@ const versi = await getBotVersion();
     inline_keyboard: [
       [
         { 
-          text: " Back to menu", 
+          text: "< Back to menu", 
           callback_data: "back",
         }
       ],
@@ -1544,7 +1544,7 @@ const versi = await getBotVersion();
 });
 
 bot.action("tqto", async (ctx) => {
-await ctx.answerCbQuery("🔥Executing...");
+await ctx.answerCbQuery("🔥𝙀𝙭𝙚𝙘𝙪𝙩𝙞𝙣𝙜");
   
   const mainMenuMessage = `\`\`\`
 CONTRIBUTORS
@@ -1555,7 +1555,7 @@ CONTRIBUTORS
 
 Thanks For All Buyer And Partner !
 \`\`\`
-© PhenoxScary ス
+© Getsuzo Znx › Company ス
 `;
 
   const media = {
@@ -1569,7 +1569,7 @@ Thanks For All Buyer And Partner !
     inline_keyboard: [
       [
         { 
-          text: " Back to menu", 
+          text: "< Back to menu", 
           callback_data: "back",
         }
       ],
@@ -1590,17 +1590,17 @@ Thanks For All Buyer And Partner !
 bot.action("bugm", async (ctx) => {
 const username = ctx.from.first_name || ctx.from.username || "Tidak Diketahui";
 
-await ctx.answerCbQuery("🔥Executing...");
+await ctx.answerCbQuery("🔥𝙀𝙭𝙚𝙘𝙪𝙩𝙞𝙣𝙜");
   const mainMenuMessage = `
-*╭──(      Phenox ☇ Scary      )*
+*╭──(      Getsuzo ☇ Znx      )*
 *│🎭 𝐍𝐚𝐦𝐞 : ${username}*
 *║▬▭▬▭▬▭▬▭▬▭*
 │🎭 𝐎𝐰𝐧𝐞𝐫 : RenzXml
-*│🎭 Name Script : PhenoxScary*
-*│▬▭「 PhenoxScary 」▭▬*
-║› PhenoxScary ©Copyright
+*│🎭 Name Script : GetsuzoZnx*
+*│▬▭「 GetsuzoZnx 」▭▬*
+║› Getsuzo ©Copyright
 *│› Getsuzo 628×××*
-╰━━━━━━━━━━━━━━━━━━━━━⬣
+╰━━━━━━━━━━━━━━━━━━━━━━━━━⬣
 `;
 
   const media = {
@@ -1612,7 +1612,7 @@ await ctx.answerCbQuery("🔥Executing...");
 
   const keyboard = {
     inline_keyboard: [
-      [{ text: "Back to menu", callback_data: "back" }]
+      [{ text: "< Back to menu", callback_data: "back" }]
     ]
   };
 
@@ -1631,7 +1631,7 @@ await ctx.answerCbQuery("🔥Executing...");
 
 
 bot.action("manifest", async (ctx) => {
-await ctx.answerCbQuery("🔥Executing...");
+await ctx.answerCbQuery("🔥𝙀𝙭𝙚𝙘𝙪𝙩𝙞𝙣𝙜");
   const mainMenuMessage = `
 \`\`\`
 ( Information Pengertian Perintah Script )
@@ -1703,40 +1703,40 @@ bot.action("back", async (ctx) => {
   const versi = await getBotVersion();
   const userId = ctx.from.id.toString();
   const username = ctx.from.first_name || ctx.from.username || "Tidak Diketahui";
-  await ctx.answerCbQuery("🔥Executing...");
+  await ctx.answerCbQuery("🔥𝙀𝙭𝙚𝙘𝙪𝙩𝙞𝙣𝙜");
 
   const mainMenuMessage = `
-*╭──(      Phenox ☇ Scary      )*
+*╭──(      Getsuzo ☇ Znx      )*
 *│🎭 𝐍𝐚𝐦𝐞 : ${username}*
 *║▬▭▬▭▬▭▬▭▬▭*
 │🎭 𝐎𝐰𝐧𝐞𝐫 : RenzXml
-*│🎭 Name Script : PhenoxScary*
-*│▬▭「 PhenoxScary 」▭▬*
-║› PhenoxScary ©Copyright
-╰━━━━━━━━━━━━━━━━━━━━━⬣
+*│🎭 Name Script : Getsuzo Znx*
+*│▬▭「 Getsuzo Znx 」▭▬*
+║› GetsuzoZnx ©Copyright
+╰━━━━━━━━━━━━━━━━━━━━━━━━━⬣
 `;
 
   const keyboard = {
    inline_keyboard: [
     [
       { 
-        text: "› › PhenoxScary", 
+        text: "「 𝙓𝙥𝙡𝙤𝙞𝙩 」", 
           callback_data: "bugm" 
       }, 
       { 
-          text: "› › DevMenu", 
+          text: "「 𝙎𝙤𝙪𝙧𝙘𝙚 」", 
           callback_data: "dev_menu"
       },
     ],
     [
       {
-            text: "› › System", 
+            text: " 𝙎𝙮𝙨𝙩𝙚𝙢", 
             callback_data: "system_menu" 
       }
     ],
     [
        {
-           text: "「 Developer 」", 
+           text: "「 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 」", 
            url: "t.me/RapzXyzz" 
        }
     ],
@@ -1761,70 +1761,6 @@ const media = {
   }
 });
 
-bot.hears(/^crash\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, async (ctx) => {
-  const q = ctx.message.text.split(" ")[1];
-  const userId = ctx.from.id.toString();
-  const chatId = ctx.chat.id;
-
-  if (!q) return ctx.reply("›› Format:\n Crash 628xxxx");
-
-  if (!isActiveUser(ownerUsers, userId)) {
-    if (isOnGlobalCooldown()) {
-      const remainingTime = Math.ceil((globalCooldown - Date.now()) / 1000);
-      return ctx.reply(`⏳ Jeda, tunggu ${remainingTime} detik lagi`);
-    }
-  }
-
-  const target = q.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
-
-  const sentMessage = await ctx.replyWithPhoto(getRandomImage(), {
-    caption: `
-*╭──(      PhenoxScary     )*
-*│🎭 Status : Proccesing*
-*║▬▭▬▭▬▭▬▭▬▭*
-*│🎭 Attacking ›› ${q}*
-*║🎭 Acces Successfully ✓*
-*│▬▭「 PhenoxScary 」▭▬*
-*║›ZnxCompany ©Copyright*
-*╰━━━━━━━━━━━━━━━━━━━━━⬣*
-`,
-    parse_mode: "Markdown",
-  });
-  
-  console.log("\x1b[32m[BOT]\x1b[0m PROSES MENGIRIM BUG");
-
-  if (!isActiveUser(ownerUsers, userId)) setGlobalCooldown();
-
-  for (let i = 0; i < 1; i++) {
-    await force(target)
-  }
-  
-  console.log("\x1b[32m[BOT]\x1b[0m BUG BERHASIL DIKIRIM!");
-
-  await ctx.editMessageCaption(
-    `
-*╭──(      PhenoxScary     )*
-*│🎭 Status : Succes Sended*
-*║▬▭▬▭▬▭▬▭▬▭*
-*│🎭 Attacking ›› ${q}*
-*║🎭 Crash✓*
-*│▬▭「 PhenoxScary 」▭▬*
-*║›ZnxCompany ©Copyright*
-*╰━━━━━━━━━━━━━━━━━━━━━⬣*
-`,
-    {
-      chat_id: chatId,
-      message_id: sentMessage.message_id,
-      media: getRandomImage(),
-      parse_mode: "Markdown",
-      reply_markup: {
-        inline_keyboard: [
-          [{ text: "Developer", url: `https://wa.me/${q}` }],
-        ],
-      },
-    }
-  );
-});
 
 
 // ================================
@@ -1881,7 +1817,7 @@ bot.on("callback_query", async (ctx) => {
     if (action === "menuDelay") {
         return ctx.editMessageReplyMarkup({
             inline_keyboard: [
-                [{ text: "「 CRASH INVISIBLE 」", callback_data: `delayBasic:${target}` }],
+                [{ text: " 𝘾𝙧𝙖𝙨𝙝 𝙄𝙣𝙑𝙞𝙨𝙞𝙗𝙡𝙚  ", callback_data: `delayBasic:${target}` }],
             ]
         });
     }
@@ -1892,8 +1828,8 @@ bot.on("callback_query", async (ctx) => {
     if (action === "menuCrash") {
         return ctx.editMessageReplyMarkup({
             inline_keyboard: [
-                [{ text: "「 CRASH ANDROID 」", callback_data: `crashBasic:${target}` }],
-                [{ text: "「 DELAY INVISIBLE 」", callback_data: `crashBrutal:${target}` }],
+                [{ text: " 𝘾𝙧𝙖𝙨𝙝 𝘼𝙣𝙙𝙧𝙤𝙞𝙙 ", callback_data: `crashBasic:${target}` }],
+                [{ text: " 𝘿𝙚𝙡𝙖𝙮 𝙄𝙣𝙑𝙞𝙨𝙞𝙗𝙡𝙚 ", callback_data: `crashBrutal:${target}` }],
             ]
         });
     }
@@ -1905,8 +1841,8 @@ bot.on("callback_query", async (ctx) => {
         return ctx.editMessageReplyMarkup({
             inline_keyboard: [
                 [
-                    { text: "ANDROID", callback_data: `menuDelay:${target}` },
-                    { text: "IPHONE", callback_data: `menuCrash:${target}` }
+                    { text: "「 𝘼𝙣𝙙𝙧𝙤𝙞𝙙 」", callback_data: `menuDelay:${target}` },
+                    { text: "「 𝙞𝙋𝙝𝙤𝙣𝙚 」", callback_data: `menuCrash:${target}` }
                 ]
             ]
         });
@@ -1943,7 +1879,7 @@ bot.on("callback_query", async (ctx) => {
 `, {
         reply_markup: {
             inline_keyboard: [
-                [{ text: "「 Developer 」", url: "https://t.me/RapzXyzz" }],
+                [{ text: "「 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 」", url: "https://t.me/RapzXyzz" }],
             ]
         }
     });
